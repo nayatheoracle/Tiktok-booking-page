@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Reading </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f7c6ff, #c6e7ff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      max-width: 420px;
+      width: 100%;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .badge {
+      background: #ff5fa2;
+      color: white;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #ff5fa2;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .footer {
+      font-size: 12px;
+      color: #777;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">TikTok Special</div>
+    <h1>Book a Spiritual Reading</h1>
+    <p>Book your reading below ✨ Payment options</p>
+
+    <!-- FREE READING FORM -->
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="tiktok" placeholder="TikTok Username">
+      <select name="reading_type" required>
+        <option value="">Select Reading Type</option>
+        <option value="free">Free Mini Reading</option>
+        <option value="paid_basic">Paid Full Reading</option>
+        <option value="paid_premium">Paid Premium Reading</option>
+      </select>
+      <textarea name="question" placeholder="Your question (optional)"></textarea>
+      <button type="submit">Book a Reading</button>
+    </form>
+
+    <!-- PAID OPTIONS -->
+    <div style="margin-top:20px;">
+      <h3>🔮 Paid Readings (Instant Booking)</h3>
+      <p style="font-size:14px;">Get priority delivery + detailed reading</p>
+
+      <!-- Replace links with your Stripe / PayPal / CashApp / Square payment links -->
+      <a href="https://buy.stripe.com/yourlink" target="_blank">
+        <button style="background:#6a5acd;">Full Reading – $15</button>
+      </a>
+
+      <a href="https://buy.stripe.com/yourlink2" target="_blank">
+        <button style="background:#00b894;">Premium Reading – $30</button>
+      </a>
+    </div>
+
+    <div class="footer">✨  · Secure payments · TikTok booking page</div>
+  </div>
+</body>
+</html>
